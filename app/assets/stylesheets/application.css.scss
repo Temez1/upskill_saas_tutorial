@@ -37,12 +37,18 @@
 
 // Typography Styles
 h1, h2 , h3 {
-   font-family: 'Thasadith', sans-serif;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 400;
 }
 
 // Nav Styles
 .navbar {
    border: none;
+}
+
+.navbar-brand {
+   font-family: 'Raleway', sans-serif;
+   font-weight: 700;
 }
 
 .navbar-default .navbar-brand,
