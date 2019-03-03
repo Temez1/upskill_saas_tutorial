@@ -1,6 +1,9 @@
 # Load the Rails application.
 require_relative 'application'
 
+# Initialize the Rails application.
+Rails.application.initialize!
+
 ActionMailer::Base.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'],
   :address        => ENV['MAILGUN_SMTP_SERVER'],
@@ -8,6 +11,5 @@ ActionMailer::Base.smtp_settings = {
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
   :domain         => 'https://safe-tundra-55402.herokuapp.com',
   :authentication => :plain,
-
-# Initialize the Rails application.
-Rails.application.initialize!
+}
+ActionMailer::Base.delivery_method = :smtp
