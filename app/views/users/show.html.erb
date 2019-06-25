@@ -1,1 +1,4 @@
-<%= @user %>
+<% if current_user.plan_id == 2 %>
+    <%= @user.profile.contact_email %>
+<% end %>
+<%= @user.profile.description %> 
